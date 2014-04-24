@@ -2,30 +2,59 @@
 /*html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*/
 
 /* general styles */
-html, body {
+html, body{
   height: 100%;
   width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", sans-serif;
 }
 
 /* padded section */
 .pad-section {
-  padding: 50px 0;
+  padding: 45px 0;
 }
 .pad-section img {
   width: 100%;
 }
 
-/* vertical-centered text */
-.text-vcenter {
-  display: table-cell;
-  text-align: center;
+.pad-section .text-center h2:before, .pad-section .text-center h2:after {
+  content: " ";
+  display: inline-block;
+  height: 1px;
   vertical-align: middle;
+  background: #85817d;
+  width: 80px;
+  background-image: -webkit-linear-gradient(left top,#ecece4,#85817d);
+  margin: 0 5px;
 }
-.text-vcenter h1 {
-  font-size: 4.5em;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
+
+.pad-section .text-center h2:after {
+  background-image: -webkit-linear-gradient(left top,#85817d,#ecece4);
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.navbar-inverse {
+  background-color: #282828;
+  border-color: #080808;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #da7637;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #ff9900;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #da7637;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #ff9900;
 }
 
 /* additional sections */
@@ -41,7 +70,7 @@ html, body {
   background-size: cover;
 }
 
-.avater{
+#home .avater{
     width: 260px;
     height: 260px;
     border-radius: 50%;
@@ -54,18 +83,39 @@ html, body {
     margin: 0 auto;
 }
 
-.text-vcenter{
+/* vertical-centered text */
+#home .text-vcenter {
   background:repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  color: #dbdbdb;
+  color: #fff;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#home .text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.hideme
+{
+    margin-bottom: 100px;
+    opacity:0;
+}
+
+#aboutTitle {
+  /*background: #383838;*/
+  color: #834206;
 }
 
 #about {
 
 }
 
-.yellow-border{
-  border: 3px solid #DCCC99;
-  padding: 16px;
+#about .col-sm-12 {
+  margin-bottom: 50px;
 }
 
 #about .col-sm-5{
@@ -74,7 +124,8 @@ html, body {
 }
 
 #about .col-sm-5 h2{
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #BC793C;
+  padding-top: 20px;
   padding-bottom: 20px;
   margin: 20px 50px 20px 50px;
 }
@@ -83,13 +134,82 @@ html, body {
   font-size: 1.3em;
   font-style: italic;
   line-height: 36px;
-  color:#aaaaaa;
+  color: #aaaaaa;
+}
+
+#skill .col-sm-12 {
+  margin-bottom: 50px;
 }
 
 #skill {
-  background-color: #306d9f;
-  color: #ffffff;
+  background-color: #F5F5F3;
 }
+
+#skill h5{
+  text-align: left;
+  padding-left: 10px;
+}
+
+#skill .progress{
+  background-color: #D2D0CF; 
+  border-radius: 15px;
+  height: 17px;
+}
+
+.progress .progress-bar{
+  border-radius: 15px;
+  position: absolute;
+  height: inherit;
+  width: 0%;
+  opacity: 0;
+  -webkit-animation-duration: 2.5s;
+  -moz-animation-duration: 2.5s;
+}
+
+#skill .progress-bar-warning {
+  background-color: #ff891c;
+}
+
+@-webkit-keyframes increasing {
+  from {
+    width: 0%;
+  }
+  to{
+
+  }
+}
+
+@-moz-keyframes increasing {
+  from {
+    width: 0%;
+  }
+}
+
+
+#skill .progress-bar span{
+  background-color: #2d2d2d;
+  font-size: 10px;
+  padding: 2px;
+  position: absolute;
+  right: -14px;
+  top: -29px; 
+}
+
+#skill .progress-bar span::after {
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-top: 4px solid #2D2D2D;
+  content: "";
+  display: block;
+  left: 50%;
+  bottom: -3px;
+  margin-left: -5px;
+  position: absolute;
+  height: 0;
+  width: 0;
+  z-index: 99;
+}
+
 #skill .glyphicon {
   border: 2px solid #FFFFFF;
   border-radius: 50%;
@@ -102,8 +222,13 @@ html, body {
   width: 140px;
 }
 
-#education {
-  background: url(../images/ccu.jpg) no-repeat center center fixed;
+#work .col-sm-12 {
+  margin-bottom: 50px;
+}
+
+#work {
+  /*background: url(../images/ccu.jpg) no-repeat center center fixed;*/
+  background-color: white;
   display: table;
   height: 800px;
   position: relative;
@@ -112,20 +237,76 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+} 
+
+#work .thumbnail{
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  opacity: 0;  
 }
-#education .panel {
+
+#work .thumbnail:hover{
+  -moz-transform: scale(1.05,1.05)
+  -webkit-transform: scale(1.05,1.05)
+}
+
+@-webkit-keyframes toLarge {
+  from {
+    -webkit-transform: scale(0.2,0.2);
+  }
+  75%{
+    -webkit-transform: scale(1.05,1.05);
+  }
+  to{
+    -webkit-transform: scale(1,1);
+  }
+}
+
+@-moz-keyframes toLarge {
+  from {
+    -moz-transform: scale(0.2,0.2);
+  }
+  75%{
+    -webkit-transform: scale(1.05,1.05);
+  }
+  to{
+    -moz-transform: scale(1,1);
+  }
+}
+
+#work .panel {
   opacity: 0.85;
 }
 
-#google_map {
-  height: 500px;
+#contact {
+  background-color: #F5F5F3;
+  padding: 20px 0 ;
+}
+
+#contact .col-sm-12 {
+  margin-bottom: 50px;
+}
+
+#contact ul{
+  padding: 0;
+}
+
+#contact ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 0px 8px;
+}
+
+#contact ul li img:hover{
+  -webkit-transform: scale(1.05,1.05)
 }
 
 footer {
   padding: 20px 0;
+  background-color: #ff891c;
 }
 footer .glyphicon {
-  color: #333333;
+  color: #080808;
   font-size: 60px;
 }
 footer .glyphicon:hover {

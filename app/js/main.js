@@ -12,35 +12,44 @@
 
 $(document).ready(function (){
 
-  // create a LatLng object containing the coordinate for the center of the map
-  var latlng = new google.maps.LatLng(-33.86455, 151.209);
+  /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
 
-  // prepare the map properties
-  var options = {
-    zoom: 15,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    navigationControl: true,
-    mapTypeControl: false,
-    scrollwheel: false,
-    disableDoubleClickZoom: true
-  };
+        var bottom_of_object;
+        var bottom_of_window;
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            bottom_of_object = $(this).position().top + $(this).outerHeight();
+            bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object + 800){
+                $(this).animate({'opacity':'1','margin':'0'},1000)
+            }
+        }); 
 
-  // initialize the map object
-  var map = new google.maps.Map(document.getElementById('google_map'), options);
+        /* Check the location of each desired element */
+        $('.progress .progress-bar').each( function(i){
+            
+            bottom_of_object = $(this).position().top + $(this).outerHeight();
+            bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, increasing it it */
+            if( bottom_of_window > bottom_of_object +1550 ){
+                $(this).css({'-webkit-animation-name':'increasing','-moz-animation-name': 'increasing', 'opacity':'1'})
+            }
+        });
 
-  // add Marker
-  var marker1 = new google.maps.Marker({
-    position: latlng, map: map
-  });
-
-  // add listener for a click on the pin
-  google.maps.event.addListener(marker1, 'click', function() {
-    infowindow.open(map, marker1);
-  });
-
-  // add information window
-  var infowindow = new google.maps.InfoWindow({
-    content:  '<div class="info"><strong>This is my company</strong><br><br>My company address is here<br> 32846 Sydney</div>'
-  });  
+        $('.thumbnail').each( function(i){
+            
+            bottom_of_object = $(this).position().top + $(this).outerHeight();
+            bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, increasing it it */
+            if( bottom_of_window > bottom_of_object +2050 ){
+                $(this).css({'-webkit-animation-name':'toLarge','-moz-animation-name': 'toLarge', 'opacity':'0.9'})
+            }
+        });
+    });
 });
