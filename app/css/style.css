@@ -8,6 +8,10 @@ html, body{
   font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", sans-serif;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 /* padded section */
 .pad-section {
   padding: 45px 0;
@@ -31,18 +35,13 @@ html, body{
   background-image: -webkit-linear-gradient(left top,#85817d,#ecece4);
 }
 
-.lead {
-  font-size: 18px;
-  line-height: 35px;
-}
-
 .navbar-inverse {
   background-color: #282828;
   border-color: #080808;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #da7637;
+  color: #FE7E17;
 }
 
 .navbar-inverse .navbar-brand:hover {
@@ -50,7 +49,7 @@ html, body{
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  color: #da7637;
+  color: #FE7E17;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -101,8 +100,28 @@ html, body{
 
 .hideme
 {
-    margin-bottom: 100px;
+    position: relative;
     opacity:0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.hideme.inLeft{
+  right:200px;
+}
+
+.hideme.inRight{
+  left:200px;
+}
+
+.hideme.inLeft.slide{
+    right: 0px;
+    opacity:1;
+}
+
+.hideme.inRight.slide{
+    left: 0px;
+    opacity:1;
 }
 
 #aboutTitle {
@@ -123,11 +142,15 @@ html, body{
   padding: 20px;
 }
 
-#about .col-sm-5 h2{
+#about h3:after{
+  display: block;
+  width: 250px;
+  height: 5px;
+  margin-top: 25px;
   border-bottom: 1px solid #BC793C;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 20px 50px 20px 50px;
+  content: " ";
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #about .col-sm-5 .geek{
@@ -135,6 +158,13 @@ html, body{
   font-style: italic;
   line-height: 36px;
   color: #aaaaaa;
+}
+
+#about .lead {
+  font-size: 18px;
+  line-height: 35px;
+  padding-top: 10px;
+  border-top: 3px solid #FE7E17;
 }
 
 #skill .col-sm-12 {
@@ -228,7 +258,7 @@ html, body{
 
 #work {
   /*background: url(../images/ccu.jpg) no-repeat center center fixed;*/
-  background-color: white;
+  background-color: #e8e8e8;
   display: table;
   height: 800px;
   position: relative;
@@ -239,39 +269,78 @@ html, body{
   background-size: cover;
 } 
 
-#work .thumbnail{
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  opacity: 0;  
+#work .thumb {
+  height: auto;
+  display: inline-block;
+  margin: 0 10px;
+  text-shadow: none;
+  background: #FFF;
+  padding: 0px;
+  vertical-align: top;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
-#work .thumbnail:hover{
-  -moz-transform: scale(1.05,1.05)
-  -webkit-transform: scale(1.05,1.05)
+#work .thumb .thumb-inner {
+  position: relative;
+  z-index: 100;
 }
 
-@-webkit-keyframes toLarge {
-  from {
-    -webkit-transform: scale(0.2,0.2);
-  }
-  75%{
-    -webkit-transform: scale(1.05,1.05);
-  }
-  to{
-    -webkit-transform: scale(1,1);
-  }
+#work .thumb .thumb-image img, .thumb-details {
+-webkit-border-top-left-radius: 8px;
+-webkit-border-top-right-radius: 8px;
+-moz-border-radius-topleft: 8px;
+-moz-border-radius-top-right: 8px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
 }
 
-@-moz-keyframes toLarge {
-  from {
-    -moz-transform: scale(0.2,0.2);
-  }
-  75%{
-    -webkit-transform: scale(1.05,1.05);
-  }
-  to{
-    -moz-transform: scale(1,1);
-  }
+#work .thumb-details {
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FE7E17;
+  opacity: 0;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#work .thumb-details:hover {
+  opacity: 0.95;
+}
+
+#work .thumb-details .thumb-details-overview {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFF;
+  height: 250px;
+  overflow: hidden;
+}
+
+#work .thumb-details .thumb-details-overview .thumb-review {
+  display: block;
+  height: 200px;
+  overflow: auto;
+}
+
+#work .thumb .thumb-info{
+  padding: 0px 15px 5px 15px
+}
+
+#work .thumb .thumb-info .thumb-title .thumb-name a{
+  color:#444;
+}
+
+#work .thumb .thumb-info .thumb-title .thumb-name a:hover{
+  color:#FE7E17;
 }
 
 #work .panel {
@@ -312,4 +381,5 @@ footer .glyphicon {
 footer .glyphicon:hover {
   color: #306d9f;
 }
+
 
