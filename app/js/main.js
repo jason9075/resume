@@ -25,9 +25,23 @@ $(document).ready(function (){
             
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
-                // $(this).animate({'opacity':'1','margin':'0'},1000)
                 $(this).addClass("slide");
             }
+        }); 
+
+        /* Check the location of each desired element */
+        $('.navbar-inverse').each( function(i){
+            
+            bottom_of_object = $(about).offset().top ;
+            bottom_of_window = $(window).scrollTop() ;
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({'-webkit-transform':'translateY(0)','-o-transform': 'translateY(0)'})
+            }else{
+                $(this).css({'-webkit-transform':'translateY(-50px)','-o-transform': 'translateY(-50px)'})
+            }
+
         }); 
 
         
