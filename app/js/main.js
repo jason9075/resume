@@ -12,11 +12,16 @@
 var i= 1;
 $(document).ready(function (){
 
+    var d = new Date();
+    var str = d.getFullYear()+ "." + d.getMonth()+ "." +d.getDate();
+    document.getElementById("today").innerHTML = str;
+
   /* Every time the window is scrolled ... */
     $(window).scroll( function(){
 
         var bottom_of_object;
         var bottom_of_window;
+        var last_bottom_of_window;
         /* Check the location of each desired element */
         $('.hideme').each( function(i){
             
@@ -32,14 +37,14 @@ $(document).ready(function (){
         /* Check the location of each desired element */
         $('.navbar-inverse').each( function(i){
             
-            bottom_of_object = $(about).offset().top ;
+            bottom_of_object = $(about).offset().top - 10 ;
             bottom_of_window = $(window).scrollTop() ;
             
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
-                $(this).css({'-webkit-transform':'translateY(0)','-o-transform': 'translateY(0)'})
+                $(this).css({'-webkit-transform':'translateY(0)','-o-transform': 'translateY(0)','-moz-transform': 'translateY(0)'})
             }else{
-                $(this).css({'-webkit-transform':'translateY(-50px)','-o-transform': 'translateY(-50px)'})
+                $(this).css({'-webkit-transform':'translateY(-50px)','-o-transform': 'translateY(-50px)','-moz-transform': 'translateY(-50px)'})
             }
 
         }); 

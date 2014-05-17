@@ -5,9 +5,12 @@
   <meta name="Jason Kuan" content="Personal Resume" />
   <title>Jason Kuan |Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Cabin|Poiret+One|Montserrat' rel='stylesheet' type='text/css'>
   <!-- attach CSS styles -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" />
+  <link href="css/timeline.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -29,11 +32,11 @@
     
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">首頁</a></li>
-        <li><a href="#about">關於我</a></li>
-        <li><a href="#skill">技能</a></li>
-        <li><a href="#work">作品</a></li>
-        <li><a href="#contact">聯絡方式</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -46,7 +49,7 @@
     <div class="avater" style="background-image: url(images/me.jpg);background-size: cover;"></div>
     <!-- Personal Info end -->     
     <h1>Jason Kuan</h1>
-    <h3>Hi. I'm Jason Kuan. A Software Engineer, Game Developer and College Student.</h3>
+    <h3>Hi. I'm Jason. A Game Developer and College Student.</h3>
   </div>
 </div>
 <!-- /home section -->
@@ -56,60 +59,89 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-        <h2>關於我</h2>
+        <h2>About Me</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-offset-1 col-xs-10  col-md-offset-1 col-md-5">
-        <img  src="images/hack.png" alt="" />
+        <img class="hideme inLeft" src="images/hack.png" alt="" />
       </div>
       <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5 text-center">
-        <h3 >Jason Kuan</h3>
-        <p class="geek">Geek</p>
+        <div class="hideme inRight">
+          <h3 >Jason Kuan</h3>
+          <p class="geek">Geek</p>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-offset-1 col-xs-10  col-md-offset-1 col-md-5">
-        <p class="lead">　　Hello！我畢業於國立中正大學通訊工程系，主修網路通訊，學習是我的興趣，我喜歡寫程式！活在網路時代，我覺得寫程式是一件很酷的事情，當你在腦中蹦出一了好idea時，你可以通過你的雙手實現它，然後就可以讓上百位的用戶使用你的程式！It is a Magic！</p>
-      </div>
-      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-        <img class="hideme inRight" src="images/ccunight.jpg" alt="" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-offset-1 col-xs-10  col-md-offset-1 col-md-5">
-        <img class="hideme inLeft" src="images/hack.png" alt="" />
-      </div>
-      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-        <p class="lead">　　高中時，加入學校的資訊社，print出第一個的Hello World，發現自己對電腦科學的熱忱，高二時擔任社長，除了一面學習電腦知識外，同時準備著社課給學弟妹。</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-offset-1 col-xs-10  col-md-offset-1 col-md-5">
-        <p class="lead">　　大學時期，我按照著學校的課程，學習如何用C語言解決問題，了解資料結構與演算法，並摸了一點組合語言，了解程式底層的運作，但是按照學校的進度根本無法滿足我的求知慾。所以大三時，我和一群志同道合的朋友們一同學習寫程式，我們把PHP當作開始，學著如何操控MySQL資料庫。</p>
-      </div>
-      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-        <img class="hideme inRight" src="images/hack.png" alt="" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-offset-1 col-xs-10  col-md-offset-1 col-md-5">
-        <img class="hideme inLeft" src="images/hack.png" alt="" />
-      </div>
-      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-        <p class="lead">　　我的專題寫了一款類似FB舉辦活動的Android App，使用Google App Engine架設後端服務，並在Mobile App上呈現。經過了Java物件導向的洗禮，開始學習軟體工程，試著使用前人的Design Pattern，並嘗試和朋友使用Scrum敏捷開發法開發行動遊戲。</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-offset-1 col-xs-10  col-md-offset-1 col-md-5">
-        <p class="lead">　　除了理工上的學習外，我覺得真正要能做出一個好產品，只有idea和技術是不夠的！所以我在大四前的暑假找了臺北一家新創公司實習，叫做「好書服」文創，是一家軟體服務公司，將語音導覽整合在行動裝置上。我在那裡學習行銷，如何將公司的產品打入市場，找到Target Audience。以及透過良好的UI設計才能更容易將產品散播出去！</p>
-      </div>
-      <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-5">
-        <img class="hideme inRight" src="images/soohoo.jpg" alt="" />
+      <div class="col-xs-offset-1 col-xs-10  col-md-offset-2 col-md-8">
+        <p class="lead text-center">Hello！我畢業於國立中正大學通訊工程系，主修網路通訊，學習是我的興趣，我喜歡寫程式！因為會寫程式就可以把自己的idea做出來，我也喜歡研究使用者界面UI，因為我覺得好的視覺設計可以提高生活品質。<br>
+          除此之外，我也喜歡玩遊戲，遊戲不只是拿來殺時間的工具，好的遊戲可以告訴你一段故事、啟發你的省思甚至體驗一段旅程，我認為它是一種文字、電影、音樂的藝術綜合體。</p>
       </div>
     </div>
   </div>
 </div>
+<ul class='timeline v2'>
+  <li class="year">1992</li>
+  <li class='event offset-first'>
+    <h4>1992.1.13</h4>
+      <p>我出生來到了這個世界。</p>
+  </li> 
+  <li class='event'>
+    <h4>1999.小學二年級</h4>
+      <p>家裡有了第一台電腦可以玩Sonic 3。</p>
+        <img class='no-box centered' src="images/sonic3.png" alt="Sonic 3">
+  </li> 
+  <li class='event'>
+    <h4>2004.國中二年級</h4>
+      <p>為了和朋友一起打電動，我架了一個客製化的Server 和朋友一起玩。</p>
+        <img class='no-box centered' src="images/cs.jpg" alt="Counter-Strike">
+  </li> 
+  <li class='event'>
+    <h4>2007.高中一年級</h4>
+      <p>參加資訊社，用C++印出了人生第一個Hello World!</p>
+  </li> 
+  <li class="year">2013</li>
+  <li class="event offset-first">
+    <h4>2013.6.23</h4>
+      <p>完成了學校的專題，我們做了一個可以定位的mobile app，我最大的收獲是用了<a href="https://jason9075-test.appspot.com" title="Soohoo Book">Google GAE </a>架了後端資料庫，了解網站如何和手機溝通。</p>
+        <img class='no-box centered' src="images/gae.png" alt="Google App Engine">
+  </li>
+  <li class="event">
+    <h4>2013.7.10</h4>
+      <p>在暑假期間到了臺北<a href="http://blog.soohoobook.com/" title="Soohoo Book">好書服文創公司</a>實習，我在公司學到如何建立數據統計分析使用者和如何經營粉絲專頁培養忠誠客戶等，讓我收獲良多。最酷的是，公司很有活力，老闆特別帶了實習生的我們參觀Google辦公室。</p>
+        <img class='no-box centered' src="images/soohoo.jpg" alt="Soohoo Book">
+  </li> 
+  <li class="event">
+    <h4>2013.9.9</h4>
+      <p>實習的最後，我們在臺北松煙設計展上，讓公司的<a href="http://www.hearhere.com.tw/" title="Hear Here">語音導覽app</a>與愛看展的人相遇。</p>
+        <img class='no-box centered' src="images/soohooapp.jpg" alt="Hear Here">
+  </li>
+  <li class="event">
+    <h4>2013.10.29</h4>
+      <p>和同學一起買了一張大桌子，把自己家裡當工作室，利用每週五到日沒課的時間一起寫程式。</p>
+        <img class='no-box centered' src="images/kalacool.jpg" alt="Hear Here">
+  </li>
+  <li class="year">2014</li>
+  <li class="event offset-first">
+    <h4>2014.1.19</h4>
+    <p>跟室友修了一堂嵌入式系統，做了一檯讓盆栽可以到處跑來跑去找太陽曬又不怕撞到牆壁的<a href="https://www.youtube.com/watch?v=GTwuZmMIeSM" title="Plants For Free">自走盆栽車</a>。</p>
+      <img class='no-box centered' src="images/plantsforfreecar.jpg" alt="Plants for Free">
+  </li>
+  <li class="event">
+    <h4>2014.1.26</h4>
+    <p>寒假時和同學去高雄參加了<a href="http://globalgamejam.org/2014/games/shuffle" title="Global Game Jam 14">國際遊戲黑客松Global Game Jam</a> ，跟不同領域的人合作和寫程式的能力，在兩天內作出了一款遊戲出來。</p>
+      <img class='no-box centered' src="images/ggj14me.jpg" alt="Global Game Jam 14">
+  </li>
+ <!--  <li class='event'>
+    <h4>2014.4.29</h4>
+    <p>我和一群朋友，意外發現了學校網站的<a href="https://jason9075.logdown.com/" title="hack in school">漏洞</a>，並且幫學校修補起來。</p>
+  </li> -->
+  <li class='event'>
+    <h4 id="today"></h4>
+    <p>今天，你看到了這個網頁。</p>
+  </li>
+</ul>
 <!-- /about -->
 
 <!-- Skill -->
@@ -117,27 +149,21 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2>技能</h2>
+        <h2>Skill</h2>
       </div>
     </div>
     <div class="row text-center">
       <div class="col-sm-6 col-xs-12">
-        <h5>程式開發（C、Java）</h5>
-        <div class="progress">
-          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-            <span>80%</span>
-          </div>
-        </div>
-        <h5>網頁前端設計（HTML+CSS）</h5>
-        <div class="progress">
-          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-            <span>60%</span>
-          </div>
-        </div>
-        <h5>網頁後端建置（PHP）</h5>
+        <h5>硬體程式開發（C、Assemble）</h5>
         <div class="progress">
           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
             <span>70%</span>
+          </div>
+        </div>
+        <h5>物件導向程式開發（Java）</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+            <span>80%</span>
           </div>
         </div>
         <h5>APP開發（Corona SDK）</h5>
@@ -146,10 +172,22 @@
             <span>90%</span>
           </div>
         </div>
+        <h5>網頁前端設計（HTML+CSS）</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+            <span>75%</span>
+          </div>
+        </div>
+        <h5>網頁後端建置（PHP、JSP）</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+            <span>70%</span>
+          </div>
+        </div>
       </div>
       <div class="col-sm-6 col-xs-12">
-        <h3>學習歷程</h3>
-        <p>test</p>
+        <h4>我的程式學習歷程</h4>
+        <p>左邊能力條是依據我學習的相對時間長度來量化，我目前還只是一位大學生，我不敢說我有多強大的能力，因為每一種語言都有很多地方值得深入，所以我非常樂意虛心學習任何一種語言，</p>
       </div>
     </div>
   </div>
@@ -161,21 +199,21 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2>作品</h2>
+        <h2>Portfolio</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
-        <div class="thumb">
-          <div class="thumb-inner">
+         <div class="thumb">
+          <div class="thumb-inbox">
             <div class="thumb-image">
               <p>
-                <img src="images/plantforfree.jpg" alt="opl-site" >
+                <img src="images/2013report.png" alt="opl-site" >
               </p>
             </div>
             <div class="thumb-details">
               <div class="thumb-details-overview">  
-                <div class="thumb-review">Plants for Free 是我在大四上學期和室友做的一件作品，是一台裝載著盆栽和感應器的自走車，會偵測周圍亮度和土壤濕度，當日照不足時，自走車會移動，前往日照較強處，我們加裝了超音波測距器，使自走車得以利用演算法來避免障礙物。可放在自家陽台中，當太陽位置變換導致盆栽進入陰影區，自動移動到有陽光的地方。
+                <div class="thumb-review">Jo團去 是我和同學一起做的專題，我們寫了一款類似FB舉辦活動的Android App，使用Google App Engine架設後端服務，並在Mobile App上呈現，其中我是負責處理GAE後端Server的運作，包括使用者登入、活動資訊等，這次的開發經驗讓我了解mobile與伺服器服務的串接方式，還有和朋友一起合作開發的經驗。
                 </div>
               </div>
             </div>
@@ -183,12 +221,9 @@
               <div class="thumb-title">
                 <div class="thumb-name">
                   <h4>
-                    Plants For Free
-                    <a href="https://github.com/jason9075/plantsforfree" title="Plants For Free">
-                      <img src="images/icon/github.png" alt="opl-site" >
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=GTwuZmMIeSM" title="Plants For Free">
-                      <img src="images/icon/youtube.png" alt="opl-site" >    
+                    Jo團去 App
+                    <a href="files/2013report.docx" title="Plants For Free">
+                      <img src="images/icon/info.png" alt="opl-site" >
                     </a>
                   </h4>
                 </div>
@@ -199,7 +234,7 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="thumb">
-          <div class="thumb-inner">
+          <div class="thumb-inbox">
             <div class="thumb-image">
               <p>
                 <img src="images/shuffle.jpg" alt="opl-site" >
@@ -234,15 +269,15 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="thumb">
-          <div class="thumb-inner">
+          <div class="thumb-inbox">
             <div class="thumb-image">
               <p>
-                <img src="images/2013report.png" alt="opl-site" >
+                <img src="images/plantforfree.jpg" alt="opl-site" >
               </p>
             </div>
             <div class="thumb-details">
               <div class="thumb-details-overview">  
-                <div class="thumb-review">
+                <div class="thumb-review">Plants for Free 是我在大四上學期和室友做的一件作品，是一台裝載著盆栽和感應器的自走車，會偵測周圍亮度和土壤濕度，當日照不足時，自走車會移動，前往日照較強處，我們加裝了超音波測距器，使自走車得以利用演算法來避免障礙物。可放在自家陽台中，當太陽位置變換導致盆栽進入陰影區，自動移動到有陽光的地方。
                 </div>
               </div>
             </div>
@@ -250,23 +285,26 @@
               <div class="thumb-title">
                 <div class="thumb-name">
                   <h4>
-                    Jo團去 App
-                    <a href="files/2013report.docx" title="Plants For Free">
-                      <img src="images/icon/info.png" alt="opl-site" >
+                    Plants For Free
+                    <a href="https://github.com/jason9075/plantsforfree" title="Plants For Free">
+                      <img src="images/icon/github.png" alt="opl-site" >
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=GTwuZmMIeSM" title="Plants For Free">
+                      <img src="images/icon/youtube.png" alt="opl-site" >    
                     </a>
                   </h4>
                 </div>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-6">
+      <!-- <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="thumb">
-          <div class="thumb-inner">
+          <div class="thumb-inbox">
             <div class="thumb-image">
               <p>
-                <img src="/images/shuffle.jpg" alt="opl-site" >
+                <img src="images/shuffle.jpg" alt="opl-site" >
               </p>
             </div>
             <div class="thumb-details">
@@ -281,18 +319,18 @@
                   <h4>
                     Shuffle
                     <a href="https://github.com/Drainet/GGJ14" title="Shuffle">
-                      <img src="/images/icon/github.png" alt="opl-site" > 
+                      <img src="images/icon/github.png" alt="opl-site" > 
                     </a>
                     <a href="http://globalgamejam.org/2014/games/shuffle" title="Shuffle">
-                      <img src="/images/icon/info.png" alt="opl-site" > 
+                      <img src="images/icon/info.png" alt="opl-site" > 
                     </a>
                   </h4>
                 </div>
               </div>
             </div>
           </div>
-        </div> 
-      </div>
+        </div>  
+      </div> -->
     </div>
   </div>
 
@@ -304,16 +342,21 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2>聯絡方式</h2>
+        <h2>Contact</h2>
       </div>
     </div>
-    <div class="row text-center">
-        <ul>
-          <li><a href="https://www.facebook.com/jason9075"><img src="images/icon/facebook.png"></a></li>
-          <li><a href="https://plus.google.com/+JasonKuanCapillary"><img src="images/icon/googleplus.png"></a></li>
-          <li><a href="http://www.linkedin.com/pub/jason-kuan/70/525/35"><img src="images/icon/linkedin.png"></a></li>
-          <li><a href="https://www.youtube.com/user/jason9075"><img src="images/icon/youtube.png"></a></li>
-        </ul>
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4 text-center">
+        <a href="mailto:jason9075@gmail.com"><p>JASON9075@GMAIL.COM</p></a>
+        <div class="row text-center">
+            <ul>
+              <li><a href="https://www.facebook.com/jason9075"><img src="images/icon/facebook.png"></a></li>
+              <li><a href="https://plus.google.com/+JasonKuanCapillary"><img src="images/icon/googleplus.png"></a></li>
+              <li><a href="http://www.linkedin.com/pub/jason-kuan/70/525/35"><img src="images/icon/linkedin.png"></a></li>
+              <li><a href="http://jason9075.logdown.com/"><img src="images/icon/logdown.png"></a></li>
+            </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -321,15 +364,11 @@
 
 <!-- footer -->
 <footer>
-  <hr />
   <div class="container">
-    <p class="text-right">Jason Kuan 2014</p>
+    <p class="text-right">COPYRIGHT © 2014 Jason Kuan</p>
   </div>
 </footer>
 <!-- /footer -->
-
-
-
   <!-- attach JavaScripts -->
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/bootstrap.min.js"></script>
