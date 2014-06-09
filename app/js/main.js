@@ -12,10 +12,6 @@
 var i= 1;
 $(document).ready(function (){
 
-    var d = new Date();
-    var str = d.getFullYear()+ "." + d.getMonth()+ "." +d.getDate();
-    document.getElementById("today").innerHTML = str;
-
   /* Every time the window is scrolled ... */
     $(window).scroll( function(){
 
